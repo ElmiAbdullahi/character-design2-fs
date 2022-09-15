@@ -1,39 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <!-- metadata -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-<head>
-    <!-- metadata -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <!-- title and favicon -->
+        <title>Web App</title>
+        <link rel="icon" type="image/x-icon" href="assets/alchemy-favicon.png" />
 
-    <!-- title and favicon -->
-    <title>Web App</title>
-    <link rel="icon" type="image/x-icon" href="assets/alchemy-favicon.png" />
+        <!-- js -->
+        <script type="module" src="app.js"></script>
 
-    <!-- js -->
-    <script type="module" src="app.js"></script>
+        <!-- fonts -->
+        <!-- see https://fonts.google.com/ -->
 
-    <!-- fonts -->
-    <!-- see https://fonts.google.com/ -->
+        <!-- css -->
+        <link rel="stylesheet" href="styles/reset.css" />
+        <link rel="stylesheet" href="styles/global.css" />
+        <!-- add link for page specific css -->
+    </head>
 
-    <!-- css -->
-    <link rel="stylesheet" href="styles/reset.css" />
-    <link rel="stylesheet" href="styles/global.css" />
-    <!-- add link for page specific css -->
+    <body>
+        <header>
+            <img class="logo" src="assets/html_css_js.png" alt="logo" />
+            <h1>Dream City</h1>
+        </header>
 
-</head>
+        <main>
+            <section>
+                <label>
+                    Name
+                    <input id="dream-city" value="" />
+                </label>
 
-<body>
-    <header>
-        <img class="logo" src="assets/html_css_js.png" alt="logo">
-        <h1>Web App</h1>
-    </header>
+                <label>
+                    Water
+                    <select id="water-select">
+                        <option value="Beach">Beach</option>
+                        <option value="River">River</option>
+                        <option value="Lake">Lake</option>
+                    </select>
+                </label>
 
-    <main>
+                <label>
+                    City
+                    <select id="city-select">
+                        <option value="big-city">Big City</option>
+                        <option value="medium-city">Medium City</option>
+                        <option value="small-city">Small City</option>
+                    </select>
+                </label>
 
-    </main>
+                <label>
+                    Countries
+                    <select id="country-select">
+                        <option value="Usa">Big Country</option>
+                        <option value="Somalia">Medium Country</option>
+                        <option value="Uk">Small Country</option>
+                    </select>
+                </label>
 
-</body>
+                <label>
+                    Add Slogan
+                    <div class="add-slogan">
+                        <input id="slogan-input" />
+                        <button id="add-slogan-button">+</button>
+                    </div>
+                </label>
+            </section>
 
+            <article id="user-article" class="user">
+                <h1 id="user-header"></h1>
+                <img id="user-place" src="assets/places/Somalia.png" alt="somalia">
+                <div class="slogan">
+                    <h2>Slogans</h2>
+                    <ul id="slogan-list"></ul>
+                </div>
+        </main>
+    </body>
 </html>
