@@ -6,15 +6,15 @@ const waterPlace = document.getElementById('water-place');
 // city change DOM Elements
 const citySelect = document.getElementById('city-select');
 const cityPlace = document.getElementById('destination-place');
-//
+//country change DOM Elements
 const countrySelect = document.getElementById('country-select');
+const countryPlace = document.getElementById('countries-place');
 const nameInput = document.getElementById('dream-city');
-const sloganList = document.getElementById('slogan-list');
+// const sloganList = document.getElementById('slogan-list');
 const sloganInput = document.getElementById('skill-input');
 const addSloganButton = document.getElementById('add-slogan-button');
 const destinationArticle = document.getElementById('destination-article');
 const destinationHeader = document.getElementById('destination-header');
-const destinationPlace = document.getElementById('destination-place');
 // const destinationCountries = document.getElementById('');
 
 /* State */
@@ -64,6 +64,9 @@ function displayDestination() {
 
     waterPlace.src = 'assets/places/' + destination.water + '.png';
     waterPlace.atl = destination.water;
+
+    countryPlace.src = 'assets/places/' + destination.country + '.png';
+    countryPlace.alt = destination.country;
 
     cityPlace.src = 'assets/places/' + destination.city + '.png';
     cityPlace.alt = destination.city;
