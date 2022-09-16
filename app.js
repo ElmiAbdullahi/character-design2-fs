@@ -48,7 +48,6 @@ countrySelect.addEventListener('change', () => {
     displayDestination();
 });
 addSloganButton.addEventListener('click', () => {
-    console.log(sloganInput);
     // get the slogan from the input
     const slogan = sloganInput.value;
     // add the slogan to the destination.slogan array
@@ -58,6 +57,7 @@ addSloganButton.addEventListener('click', () => {
 
     // reset the skill input
     sloganInput.value = '';
+    // !!!!!!!!!!!!!!!
 });
 
 /* Display Functions */
