@@ -10,8 +10,8 @@ const cityPlace = document.getElementById('destination-place');
 const countrySelect = document.getElementById('country-select');
 const countryPlace = document.getElementById('countries-place');
 const nameInput = document.getElementById('dream-city');
-// const sloganList = document.getElementById('slogan-list');
-const sloganInput = document.getElementById('skill-input');
+const sloganList = document.getElementById('slogan-list');
+const sloganInput = document.getElementById('slogan-input');
 const addSloganButton = document.getElementById('add-slogan-button');
 const destinationArticle = document.getElementById('destination-article');
 const destinationHeader = document.getElementById('destination-header');
@@ -19,7 +19,7 @@ const destinationHeader = document.getElementById('destination-header');
 
 /* State */
 let destination = {
-    name: 'yolo',
+    name: '',
     water: 'beach',
     city: 'medium-city',
     country: 'UK',
@@ -47,16 +47,19 @@ countrySelect.addEventListener('change', () => {
     destination.country = countrySelect.value;
     displayDestination();
 });
-addSloganButton.addEventListener('change', () => {
+addSloganButton.addEventListener('click', () => {
+    console.log(sloganInput);
     // get the slogan from the input
     const slogan = sloganInput.value;
     // add the slogan to the destination.slogan array
     destination.slogan.push(slogan);
     // redisplay the slogans
+    displaySlogan();
 
     // reset the skill input
     sloganInput.value = '';
 });
+
 /* Display Functions */
 function displayDestination() {
     destinationArticle.classList.value = destination.country;
@@ -72,5 +75,16 @@ function displayDestination() {
     cityPlace.alt = destination.city;
 }
 
+function displaySlogan() {
+    sloganList.innerHTML = '';
+
+    for (let slogan of destination.slogan) {
+        const li = document.createElement('li');
+        li.textContent = slogan;
+        sloganList.append(li);
+    }
+}
+
 // (don't forget to call any display functions you want to run on page load!)
 displayDestination();
+displaySlogan();
